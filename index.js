@@ -15,7 +15,7 @@ app.get('/:word/echo', (req, res) => {
 app.get("/:word/echo", (req, res) => {
   const word = req.params.word;
   res.json({
-    echo: updated
+    echo: word
   });
 });
 app.listen(port, () => {
