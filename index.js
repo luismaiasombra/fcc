@@ -20,7 +20,7 @@ app.get("/name", (req, res) => {
   const lastName = req.query.last;
   console.log("First name: " + firstName);
   console.log("Last name: " + lastName);
-  res.json({ name: `${firstName} ${lastName}` });
+  res.json({ "name": `${firstName} ${lastName}` });
 });
 
 module.exports = app;
