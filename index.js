@@ -14,4 +14,13 @@ app.listen(port, () => {
   //console.log(`Server running at http://localhost:${port}`);
 })
 
+
+app.get("/name", (req, res) => {
+  const firstName = req.query.first;
+  const lastName = req.query.last;
+  console.log("First name: " + firstName);
+  console.log("Last name: " + lastName);
+  res.json({ name: `${firstName} ${lastName}` });
+});
+
 module.exports = app;
